@@ -1,0 +1,74 @@
+{
+  "name": "RigState",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "type": {
+      "type": "number"
+    },
+    "miner": {
+      "type": "string"
+    },
+    "hashrate": {
+      "type": [
+        "number"
+      ]
+    },
+    "busId": {
+      "type": [
+        "string"
+      ]
+    },
+    "totalHash": {
+      "type": "number"
+    },
+    "temp": {
+      "type": [
+        "number"
+      ]
+    },
+    "fan": {
+      "type": [
+        "number"
+      ]
+    },
+    "power": {
+      "type": [
+        "number"
+      ]
+    },
+    "diskFree": {
+      "type": "string"
+    },
+    "cpuTemp": {
+      "type": "string"
+    },
+    "cpuLoad": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getCharts"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "100",
+    "name": "Claymore dual v11.91",
+    "type": 0,
+    "pathServer": "files/claymore119.7z",
+    "pathClient": "/honey/miners/claymore119/",
+    "nameInternal": "claymore",
+    "pathReadMe": "files/readme/claymore119.txt",
+    "options": "-dbg -1 -mport 2222",
+    "default": "-epool exp.2miners.com:3030 \n-ewal 0xd0BE6954056633B2e98716ff76c7a5b7ADBD2448.%RIG_NAME% \n-epsw x \n-allcoins 1 \n-allpools 1",
+    "labels": "amd;nvidia"
+  },
+  {
+    "id": "101",
+    "name": "GMiner v1.9",
+    "type": 0,
+    "pathServer": "files/gminer19.7z",
+    "pathClient": "/honey/miners/gminer19/",
+    "nameInternal": "gminer",
+    "pathReadMe": "files/readme/gminer19.txt",
+    "options": "--api 666",
+    "default": "--algo 144_5 \n--pers BgoldPoW \n--server eu.pool.gold \n--port 3050 \n--user ANP4eJERuSsKufnm6JukyrFQ9NFTFXg4zX.%RIG_NAME% \n--pass x",
+    "labels": "nvidia"
+  },
+  {
+    "id": "102",
+    "name": "T-Rex v0.8.3",
+    "type": 0,
+    "pathServer": "files/trex083-c91.7z",
+    "pathClient": "/honey/miners/trex083-c91/",
+    "nameInternal": "trex",
+    "pathReadMe": "files/readme/trex083.txt",
+    "options": "",
+    "default": "-a x16r \n-o stratum+tcp://eu.minermore.com:4501 \n-u 14oxo4bKdqXjjFWiuDHL4cDkqiEdmG6Thk \n-p %RIG_NAME% ",
+    "labels": "nvidia"
+  },
+  {
+    "id": "103",
+    "name": "Phoenixminer v4.0a",
+    "type": 0,
+    "pathServer": "files/phoenix40a.7z",
+    "pathClient": "/honey/miners/phoenix40a/",
+    "nameInternal": "phoenix",
+    "pathReadMe": "files/readme/phoenix40a.txt",
+    "options": "-dbg -1",
+    "default": "-pool exp.2miners.com:3030  \n-wal 0xd0BE6954056633B2e98716ff76c7a5b7ADBD2448.%RIG_NAME%  \n-pass x",
+    "labels": "amd;nvidia"
+  }
+]

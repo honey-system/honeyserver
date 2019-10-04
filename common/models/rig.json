@@ -1,0 +1,208 @@
+{
+  "name": "Rig",
+  "plural": "Rigs",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "numId": {
+      "type": "number",
+      "required": true,
+      "generated": true,
+      "index": true
+    },
+    "status": {
+      "type": "number"
+    },
+    "statusDesc": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "newPassword": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "string"
+    },
+    "versionOS": {
+      "type": "string"
+    },
+    "hasTasks": {
+      "type": "boolean",
+      "default": false
+    },
+    "minerId": {
+      "type": "number"
+    },
+    "ownerId": {
+      "type": "number",
+      "required": true
+    },
+    "ocAMDSpec": {
+      "type": "Object"
+    },
+    "ocNVSpec": {
+      "type": "Object"
+    },
+    "minerSpec": {
+      "type": "Object"
+    },
+    "notification": {
+      "type": "Object",
+      "default": {
+        "error": true,
+        "info": true
+      }
+    },
+    "wd": {
+      "type": "Object",
+      "default": {
+        "enabled": false,
+        "restart": false,
+        "reboot": false,
+        "minHash": 0
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "info": {
+      "type": "hasOne",
+      "model": "RigInfo",
+      "foreignKey": "rigId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "stats": {
+      "type": "hasMany",
+      "model": "RigState",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "tasks": {
+      "type": "hasMany",
+      "model": "Task",
+      "foreignKey": ""
+    },
+    "miner": {
+      "type": "belongsTo",
+      "model": "Miner",
+      "foreignKey": "minerId"
+    },
+    "logs": {
+      "type": "hasMany",
+      "model": "RigLog",
+      "foreignKey": ""
+    },
+    "owner": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "ownerId"
+    },
+    "labels": {
+      "type": "hasAndBelongsToMany",
+      "model": "Label"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "log"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "logs"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "login"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "info"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "state"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getRigs"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getRig"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "changeRig"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "command"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getCommands"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "removeCommands"
+    }
+  ],
+  "methods": {},
+  "mixins": {
+    "NestedFilter": null
+  }
+}

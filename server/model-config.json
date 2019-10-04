@@ -1,0 +1,79 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins",
+      "../node_modules/loopback-nested-filter-mixin"
+    ]
+  },
+  "User": {
+    "dataSource": "data"
+  },
+  "AccessToken": {
+    "dataSource": "data",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "data",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "data",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "data",
+    "public": false
+  },
+  "Rig": {
+    "dataSource": "data",
+    "public": true
+  },
+  "RigInfo": {
+    "dataSource": "data",
+    "public": true
+  },
+  "RigState": {
+    "dataSource": "data",
+    "public": true
+  },
+  "RigLog": {
+    "dataSource": "data",
+    "public": true
+  },
+  "Miner": {
+    "dataSource": "data",
+    "public": true
+  },
+  "Overclock": {
+    "dataSource": "data",
+    "public": true
+  },
+  "Task": {
+    "dataSource": "data",
+    "public": true
+  },
+  "Account": {
+    "dataSource": "data",
+    "public": true
+  },
+  "HoneyFile": {
+    "dataSource": "data",
+    "public": true
+  },
+  "Label": {
+    "dataSource": "data",
+    "public": true
+  }
+}

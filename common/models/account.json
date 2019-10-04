@@ -1,0 +1,159 @@
+{
+  "name": "Account",
+  "plural" : "Accounts",
+  "base": "User",
+  "strict": false,
+  "idInjection": false,
+  "loginAccessTokenTTL": 1209600,
+  "resetPasswordTokenTTL": 86400,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "created": {
+      "type": "date"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "type": {
+      "type": "number"
+    },
+    "status": {
+      "type": "number",
+      "default": 1
+    },
+    "userIdTelegram": {
+      "type": "string"
+    },
+    "enableFee": {
+      "type": "boolean",
+      "default": "false"
+    },
+    "feeMinutes": {
+      "type": "number",
+      "default": 20
+    },
+    "maxRigs": {
+      "type": "number",
+      "default": 999
+    },
+    "settings": {
+      "type": "Object",
+      "default": {
+        "notification": {
+          "login": false
+        }
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tasks": {
+      "type": "hasMany",
+      "model": "Task",
+      "foreignKey": "ownerId"
+    },
+    "rigs": {
+      "type": "hasMany",
+      "model": "Rig",
+      "foreignKey": "ownerId"
+    },
+    "miners": {
+      "type": "hasMany",
+      "model": "Miner",
+      "foreignKey": "ownerId"
+    },
+    "feeMiner": {
+      "type": "belongsTo",
+      "model": "Miner",
+      "foreignKey": "feeMinerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "register"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "resendVerificationEmail"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "testEmail"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "login"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "logout"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "updatePassword"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY",
+      "property": "changeEmail"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY",
+      "property": "resendChangeEmail"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY",
+      "property": "confirmChangeEmail"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "editAccount"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getAccount"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Task",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "status": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "type": {
+      "type": "number"
+    },
+    "ownerId": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "ownerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

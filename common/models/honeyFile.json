@@ -1,0 +1,75 @@
+{
+  "name": "HoneyFile",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "number"
+    },
+    "nameInternal": {
+      "type": "string"
+    },
+    "type": {
+      "type": "number"
+    },
+    "pathServer": {
+      "type": "string"
+    },
+    "pathClient": {
+      "type": "string"
+    },
+    "pathReadMe": {
+      "type": "string"
+    },
+    "options": {
+      "type": "string"
+    },
+    "default": {
+      "type": "string"
+    },
+    "labels": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getFiles"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "changeHoneyFile"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "changeHoneyFile"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,56 @@
+'use strict';
+
+global.constants = {
+
+  FILE_TYPE_MINER : 0,
+  FILE_TYPE_OS : 1,
+
+  STATE_TYPE_TEMP : 0,
+  STATE_TYPE_ACTUAL : 1,
+  STATE_TYPE_TO_REMOVE : 2,
+
+  RIG_STATUS_INACTIVE : 0,
+  RIG_STATUS_ACTIVE : 1,
+  RIG_STATUS_DELETE : 2,
+
+  MINER_STATUS_INACTIVE : 0,
+  MINER_STATUS_ACTIVE : 1,
+  MINER_STATUS_DELETE : 2,
+
+  FILE_STATUS_INACTIVE : 0,
+  FILE_STATUS_ACTIVE : 1,
+  FILE_STATUS_DELETE : 2,
+
+  TASK_STATUS_INACTIVE : 0,
+  TASK_STATUS_ACTIVE : 1,
+
+  TASK_TYPE_USER : 0,
+  TASK_TYPE_FEE : 1,
+
+  OS_TYPE_AMD : 0,
+  OS_TYPE_NVIDIA : 1,
+
+  LOG_TYPE_INFO : 0,
+  LOG_TYPE_ERROR : 1,
+  LOG_TYPE_ANSWER : 2,
+
+  ACCOUNT_TYPE_USER : 0,
+  ACCOUNT_TYPE_ADMIN : 1,
+  ACCOUNT_TYPE_SUPER_ADMIN : 2,
+
+  ACCOUNT_STATUS_BANNED : 0,
+  ACCOUNT_STATUS_ENABLE : 1,
+  ACCOUNT_STATUS_SUSPEND : 2
+
+};
+
+global.settings = {
+
+  systemAccountId: 2,
+  feeMinersId: [1],
+  feeMinutesDefault: 20,
+  feeMinerIdDefault: 1,
+
+  maxCountRigsDefault: 10,
+
+};

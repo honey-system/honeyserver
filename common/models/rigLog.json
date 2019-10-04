@@ -1,0 +1,40 @@
+{
+  "name": "RigLog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "type": {
+      "type": "number",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "payload": {
+      "type": "string",
+      "max": 10000,
+      "mysql": {
+        "dataType": "LONGTEXT"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

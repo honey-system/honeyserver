@@ -1,0 +1,71 @@
+{
+  "name": "Miner",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "number"
+    },
+    "options": {
+      "type": "string",
+      "mysql": {
+        "dataType": "LONGTEXT"
+      }
+    },
+    "conf": {
+      "type": "string",
+      "mysql": {
+        "dataType": "LONGTEXT"
+      }
+    },
+    "fileId": {
+      "type": "number"
+    },
+    "pathReadMe": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "ownerId"
+    },
+    "honeyFile": {
+      "type": "belongsTo",
+      "model": "HoneyFile",
+      "foreignKey": "fileId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getMiners"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "changeMiner"
+    }
+  ],
+  "methods": {}
+}

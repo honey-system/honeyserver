@@ -1,0 +1,46 @@
+{
+  "name": "RigInfo",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "bootTime": {
+      "type": "date"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "motherboard": {
+      "type": "string"
+    },
+    "memory": {
+      "type": "string"
+    },
+    "cpu": {
+      "type": "string"
+    },
+    "hard": {
+      "type": "string"
+    },
+    "cards": {
+      "type": ["object"],
+      "default": []
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Overclock",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "number",
+      "required": true
+    },
+    "memory": {
+      "type": "string"
+    },
+    "core": {
+      "type": "string"
+    },
+    "pl": {
+      "type": "string"
+    },
+    "volt": {
+      "type": "string"
+    },
+    "fan": {
+      "type": "string",
+      "default": 0,
+      "required": true
+    },
+    "ownerId": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getOCs"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "changeOverclock"
+    }
+  ],
+  "methods": {}
+}

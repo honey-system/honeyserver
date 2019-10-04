@@ -1,0 +1,11 @@
+[
+  {
+    "email": "crypto@honey",
+    "username": "Honey User",
+    "password": "MiningLive",
+    "type": 1,
+    "status": 1,
+    "enableFee": 0,
+    "emailVerified": 1
+  }
+]
