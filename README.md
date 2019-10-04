@@ -11,7 +11,8 @@
 - Уведомления Telegram<p>
 
 <h4>Обзор системы, настройка клиента, инструкции по использованию</h4>
-[![](http://img.youtube.com/vi/QAO7KSql2rM/0.jpg)](http://www.youtube.com/watch?v=QAO7KSql2rM)
+[![](http://img.youtube.com/vi/QAO7KSql2rM/0.jpg)]
+(http://www.youtube.com/watch?v=QAO7KSql2rM "Посмотреть в youtube")
  
 <br/>
 <h3>Логины / пароли по умолчанию</h3>
