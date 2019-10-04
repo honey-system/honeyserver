@@ -11,8 +11,8 @@
 - Уведомления Telegram<p>
 
 <h4>Обзор системы, настройка клиента, инструкции по использованию</h4>
-[![](http://img.youtube.com/vi/QAO7KSql2rM/0.jpg)]
-(http://www.youtube.com/watch?v=QAO7KSql2rM "Посмотреть в youtube")
+
+[![Посмотреть в youtube](http://img.youtube.com/vi/QAO7KSql2rM/0.jpg)](http://www.youtube.com/watch?v=QAO7KSql2rM "Посмотреть в youtube")
  
 <br/>
 <h3>Логины / пароли по умолчанию</h3>
@@ -286,6 +286,7 @@ The client (honeyOS build) is located here: <a  target="_blank" href='https://me
 <br/>
 
 <h4>An overview of the system client configuration, instructions for use</h4>
+
 [![](http://img.youtube.com/vi/QAO7KSql2rM/0.jpg)](http://www.youtube.com/watch?v=QAO7KSql2rM)
 
 <br/>
@@ -539,57 +540,4 @@ If the image recording is interrupted, use the "HDD LLF Low Level Format Tool" t
 <i>Clear information from rig to copy to another flash drive</i>
 
 <code>honey beforecopy</code>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Quick setup of the operating system</h2>
-
-1. Download:
-    - HoneyOS mega.nz
-    - HDD Raw Copy Tool portable hddguru.com
-    - HDD LLF Low Level Format Tool portable hddguru.com
-    - 7-zip archiver (if not, open rar) 7-zip.org
-    - PuTTY (to connect with the rig via ssh) greenend.org.uk portableapps.com (portable)
-2. Create rigs, assign miners to them
-    - Burn the image to a disk or USB flash drive:
-    - Unzip HoneyOS image
-    - Connect a USB flash drive, or if it is HDD - via adapter or directly to sata
-    - In HDD Raw Copy Tool portable in the first step - select an image, then
-    - Select target disk - be careful!
-    - Start
-    - When finished, go to the "HONEY_CONF" disk and in the "rig.conf" file enter the id of the rig and its password (or you can do this at system startup)
-    - Done, the flash drive can be connected to Rig
-
-If the image recording is interrupted, use the "HDD LLF Low Level Format Tool" to erase the disc completely, then repeat
 
