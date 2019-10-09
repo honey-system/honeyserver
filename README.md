@@ -22,8 +22,8 @@
 Пароль - MiningLive
 
 Клиент:<br/>
-Логин - root<br/>
-Пароль - honey123
+Логин - work<br/>
+Пароль - 1
 
 <br/>
 <h2>Установка сервера ~ 15 минут</h2>
@@ -297,8 +297,8 @@ login - crypto@honey<br/>
 password - MiningLive
 
 Client:<br/>
-login - root<br/>
-password - honey123
+login - work<br/>
+password - 1
 
 <br/>
 <h2>Server installation ~ 15 minutes</h2>
