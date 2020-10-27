@@ -1,4 +1,4 @@
-Клиент (honeyOS сборка) находится здесь: <a  target="_blank" href='https://mega.nz/#!jaY3FSAL!LWj-XMvkanRWMtOziUbP2L2maQ22XrzvPQIt_TXrXM8'>mega.nz</a>
+Клиент (honeyOS сборка) находится здесь: <a  target="_blank" href='https://mega.nz/file/3OQlACpY#hYjRKTNcSZXa53PFv6VtB5DVazxcA6CGn2LjIXSlQeY'>mega.nz</a>
 
 <h2>Возможности</h2><p>
 - Настройка майнера<p>
@@ -193,7 +193,7 @@ ctrl + o  =>  enter  => ctrl + z
 <br/>
 
 1. Скачать:
-    - HoneyOS <a target="_blank" href='https://mega.nz/#!jaY3FSAL!LWj-XMvkanRWMtOziUbP2L2maQ22XrzvPQIt_TXrXM8'>mega.nz</a>
+    - HoneyOS <a target="_blank" href='https://mega.nz/file/3OQlACpY#hYjRKTNcSZXa53PFv6VtB5DVazxcA6CGn2LjIXSlQeY'>mega.nz</a>
     - HDD Raw Copy Tool portable <a target="_blank" href="http://hddguru.com/software/HDD-Raw-Copy-Tool/HDDRawCopy1.10Portable.exe" >hddguru.com</a>
     - HDD LLF Low Level Format Tool portable <a target="_blank" href="http://hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/HDDLLF.4.40.exe">hddguru.com</a>
     - 7-zip архиватор (если нет, чем открыть rar) <a target="_blank" href="https://www.7-zip.org/a/7z1805.exe">7-zip.org</a>
@@ -271,7 +271,7 @@ ctrl + o  =>  enter  => ctrl + z
 ENGLISH VERSION
 
 <br/>
-The client (honeyOS build) is located here: <a  target="_blank" href='https://mega.nz/#!jaY3FSAL!LWj-XMvkanRWMtOziUbP2L2maQ22XrzvPQIt_TXrXM8'>mega.nz</a>
+The client (honeyOS build) is located here: <a  target="_blank" href='https://mega.nz/file/3OQlACpY#hYjRKTNcSZXa53PFv6VtB5DVazxcA6CGn2LjIXSlQeY'>mega.nz</a>
 
 <h2>Features</h2>
 
@@ -468,7 +468,7 @@ or
 <br/>
 
 1. Скачать:
-    - HoneyOS <a target="_blank" href='https://mega.nz/#!jaY3FSAL!LWj-XMvkanRWMtOziUbP2L2maQ22XrzvPQIt_TXrXM8'>mega.nz</a>
+    - HoneyOS <a target="_blank" href='https://mega.nz/file/3OQlACpY#hYjRKTNcSZXa53PFv6VtB5DVazxcA6CGn2LjIXSlQeY'>mega.nz</a>
     - HDD Raw Copy Tool portable <a target="_blank" href="http://hddguru.com/software/HDD-Raw-Copy-Tool/HDDRawCopy1.10Portable.exe" >hddguru.com</a>
     - HDD LLF Low Level Format Tool portable <a target="_blank" href="http://hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/HDDLLF.4.40.exe">hddguru.com</a>
     - 7-zip <a target="_blank" href="https://www.7-zip.org/a/7z1805.exe">7-zip.org</a>    
